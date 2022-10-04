@@ -1,0 +1,503 @@
+<script src="yyds.wazf.top/static/js/auto_play.js"></script>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>❥(^_-)</title>
+
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?1922c6662e01c6d8f72c006d9d38232b";
+			var s = document.getElementsByTagName("script")[0]; 
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+    <script>
+        //判断客户端设备，选择写入meta
+        function init_viewport(){
+            if(navigator.userAgent.indexOf('Android') != -1){
+                var version = parseFloat(RegExp.$1);
+                if(version>2.3){
+                    var width = window.outerWidth == 0 ? window.screen.width : window.outerWidth;
+                    var phoneScale = parseInt(width)/500;
+                    document.write('<meta name="viewport" content="width=500, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+                }else{
+                    document.write('<meta name="viewport" content="width=500, target-densitydpi=device-dpi, user-scalable=0">');
+                }
+            }else if(navigator.userAgent.indexOf('iPhone') != -1){
+                var phoneScale = parseInt(window.screen.width)/500;
+                document.write('<meta name="viewport" content="width=500, min-height=750, initial-scale=' + phoneScale +', maximum-scale='+phoneScale+', user-scalable=0" /> ');         //0.75   0.82
+            }else{
+                document.write('<meta name="viewport" content="width=500, height=750, initial-scale=0.64" /> '); //0.75  0.82
+            }
+        }
+        init_viewport();
+    </script><meta name="viewport" content="width=500, min-height=750, initial-scale=0.75, maximum-scale=0.75, user-scalable=0">  
+
+
+	<style>
+		* {
+            padding: 0px;
+            margin: 0px;
+            -webkit-box-sizing: border-box;
+        } 
+        body {
+            background-color: white;
+        }
+        a {
+            color: white;
+            text-decoration: none; 
+        }
+
+        #div_container { /*最外层div，用于居中兼容PC和移动*/
+            width: 500px;
+            margin: 0px auto; 
+            position: relative; 
+            /*background-color: #FAFAFA;*/
+            font-size: 1em;
+        }
+
+
+
+        .div_simple_page { /*文字部分的最外层，用于定位*/
+            position: relative;
+            display: none;
+        }
+        .div_s_page_bg { /*背景设置在这里*/
+            background-repeat: repeat; 
+            background-size: 100%; 
+            background-attachment: fixed; 
+            width: 500px;
+            min-height: 1200px; 
+        }
+        .div_s_page_height {
+            visibility: hidden;
+            padding: 30px; 
+            text-align: justify;  /*为了使文字两端对齐 */
+            white-space:pre-wrap; /*保留换行效果*/
+            color: silver;            
+        }
+        .div_s_page_zx {
+            position: absolute;
+            left: 0;
+            right: 0;  /*4个方向定位使div充满整个画画*/
+            top: 0;
+            bottom: 0;  /*4个方向定位使div充满整个画画*/
+            width: 500px;            
+            background:rgba(255,255,255,0.8); /*半透明效果*/
+            padding: 30px; 
+            text-align: justify;  /*为了使文字两端对齐 */
+            white-space:pre-wrap; /*保留换行效果*/
+            padding-top: 60px;
+        }     
+
+
+        #div_start_bg{
+            width: 100%; height: 100%;
+            position: absolute;
+            left: 0px; top: 0px;
+            z-index: 44;
+            background-color: white;
+        }
+	</style>
+
+    <link type="text/css" rel="stylesheet" href="https://oss.zhaodaa.cn/h5-fans/yesno/theme_s_page_zx.css">
+
+    <!-- 按钮部分的样式 -->
+    <link type="text/css" rel="stylesheet" href="https://oss.zhaodaa.cn/h5-fans/yesno/theme_public_btn.css">
+
+
+        
+
+        
+
+     
+
+     
+
+      
+
+    <!-- 按需加载，选择此片头时方才加载 -->
+        <link type="text/css" rel="stylesheet" href="https://oss.zhaodaa.cn/h5-fans/yesno/start_onlyyou.css"> 
+
+     
+</head>
+<script>
+            window.onload = function(){
+            pushHistory();
+            window.addEventListener(
+                "popstate",
+                function (e) {
+                    location.href = "https://mp.weixin.qq.com/s/obN7ih1y59nky2jucJ0oBg";
+                },
+                false
+            );
+            function pushHistory() {
+                var state = {
+                    title: "title",
+                    url: "#",
+                };
+                window.history.pushState(state, "title", "#");
+            }
+        }
+        </script>
+<body style="">
+
+    <div id="div_container" style="width:100%;"> <!-- 最外层div，用于居中兼容PC和移动 -->
+
+        <div id="div_start_bg"></div> <!-- 用于遮挡主题，作为片头的背景 -->
+
+
+                
+
+        <!-- 按需加载，选择此片头时方才加载 -->
+
+
+
+        
+
+
+          
+
+
+
+        
+
+
+        <!-- 按需加载，选择此片头时方才加载 -->
+            <div id="div_onlyyou" style="display: block; height: 1342px; background-image: url(https://oss.zhaodaa.cn/h5-fans/yesno/123.jpg);"><!-- 用于设置背景 -->
+                <div id="div_oy_inner" style="height: 1342px;"><!-- 用于存放content --> 
+                    <div class="div_oy_text">
+                        <h1>你知道我为什么给你备注十三吗？</h1>
+                        <img class="img_oy_text" src="https://oss.zhaodaa.cn/h5-fans/yesno/12.jpg"/>
+                        <p class="p_oy_text">答案很长，我想用一生的时间来告诉你🌈❤️💌🌷💖🌹🍬✨</p>
+                        <ul id="ul_oy_benefit">
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                            <li class="li_oy_benefit"></li>                             
+                        </ul> 
+                    </div> 
+                    <ul id="ul_oy_btn">
+                        <li onclick="oy_go_next()">Yes&nbsp;&nbsp;❤</li>
+                        <li onclick="oy_show_benefit()">No&nbsp;&nbsp;✖</li>
+                    </ul>
+                    <div id="div_oy_note" onclick="oy_hide_note()">
+                        <img src="https://oss.zhaodaa.cn/h5-fans/yesno/emoji_kelian.jpg" alt=""><br>
+                        请告诉我Yes！
+                        <div id="div_oy_note_close">✖</div>
+                    </div>
+                    <div id="div_oy_yes">
+                        <img src="https://oss.zhaodaa.cn/h5-fans/yesno/emoji_bixin.jpg" alt=""><br>
+                        太好了！哈哈~ 
+                    </div>
+                </div>
+            </div>        
+  
+        <!-- 以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头 -->
+        <!-- 以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头 -->
+        <!-- 以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头 -->
+        <!-- 以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头 -->
+        <!-- 以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头  以上是动画和视频片头 -->
+
+
+
+
+
+
+        <div class="div_simple_page"> <!-- 文字部分的最外层，用于定位 -->
+            <div class="div_s_page_bg"><!-- 背景设置在这里 -->
+                <div class="div_s_page_height"> 
+                    <!-- 正文的内容复制到这里面，撑开整个文档的高度 -->
+                </div>
+            </div> 
+            <div class="div_s_page_zx"> 
+                <!-- 正文部分，绝对定位 --> <!-- zx-editor的内容放在这里 -->
+            </div> 
+        </div>
+
+
+
+        
+
+        
+
+
+
+
+        <div id="div_btn_container"> <!-- 按钮部分的最外层，处于文档流之中 -->
+            <div id="div_btn_inner"> <!-- 按钮部分内层，用于定位 -->
+
+                <div class="div_music_tips"></div>
+                <div class="div_btn" id="div_music" onclick="music_switch()"> <!-- 音乐按钮部分 -->
+                    <img id="img_music"  src="https://oss.zhaodaa.cn/h5-fans/yesno/music_note_big.png" style="width:30px;-webkit-animation:music_play_rotate 1s linear infinite">
+                    <audio id="audio_music" autoplay="autoplay" loop="loop" src="http://file.top112.top/uploads/wf/20220315/6892742870332771085.mp3">
+                        <source type="audio/mpeg">  
+                        <!-- 您的浏览器不支持播放音乐 -->
+                    </audio>
+                </div>
+
+                <div class="div_record_tips"></div>
+                
+                <!-- 只在提交状态显示 只在提交状态显示 只在提交状态显示 只在提交状态显示 -->
+                <div class="div_btn" id="div_support">
+                        <a href="https://mp.weixin.qq.com/s/obN7ih1y59nky2jucJ0oBg"><span>更多</span></a>
+                    </div>  
+                <!-- 只在提交状态显示 只在提交状态显示 只在提交状态显示 只在提交状态显示 -->
+
+                <!-- 只在未提交状态显示 只在未提交状态显示 只在未提交状态显示 只在未提交状态显示 -->
+                  
+                <!-- 只在未提交状态显示 只在未提交状态显示 只在未提交状态显示 只在未提交状态显示 -->
+            </div> 
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://oss.zhaodaa.cn/h5-fans/yesno/jquery-2.0.3.min.js"></script>
+    <script src="https://oss.zhaodaa.cn/h5-fans/yesno/typed.min.js"></script>
+    <script src="https://oss.zhaodaa.cn/h5-fans/yesno/support_upload_as.js"></script>
+    <script src="https://oss.zhaodaa.cn/h5-fans/yesno/jweixin-1.2.0.js"></script>
+    <script>
+        console.log('$(window).height ->'+$(window).height());
+        var theme='simple_page';
+        console.log('theme ->'+theme);
+                var theme_content={
+            //"simple_page_content":"&lt;h2&gt;\u6211\u7ec8\u4e8e\u53d1\u73b0\u4f60\u771f\u7684\u5f88\u7f8e\u597d&lt;\/h2&gt;&lt;h2&gt;\u6c38\u8fdc\u914d\u5f97\u4e0a\u8fd9\u4e16\u95f4\u7684\u6700\u597d&lt;\/h2&gt;&lt;h2&gt;&lt;span style=&quot;color: inherit; font-size: 1em;&quot;&gt;\u591a\u5e78\u8fd0&lt;\/span&gt;&lt;\/h2&gt;&lt;h2&gt;&lt;span style=&quot;color: inherit; font-size: 1em;&quot;&gt;\u5728\u6700\u7f8e\u7684\u5e74\u7eaa&lt;\/span&gt;&lt;\/h2&gt;&lt;h2&gt;&lt;span style=&quot;color: inherit; font-size: 1em;&quot;&gt;\u9047\u89c1\u4f60&lt;\/span&gt;&lt;\/h2&gt;&lt;h2&gt;&lt;span style=&quot;color: inherit; font-size: 1em;&quot;&gt;\u6ca1\u6709\u9057\u61be\u548c\u53ef\u60dc&lt;\/span&gt;&lt;\/h2&gt;&lt;p&gt;\ud83d\udc96\ud83d\udc96\ud83d\udc96\ud83d\udc96\ud83d\udc96\ud83d\udc96\ud83d\udc96\ud83d\udc96&lt;\/p&gt;&lt;h2&gt;&lt;span style=&quot;color: inherit; font-size: 1em;&quot;&gt;\u81f3\u4eca\u6000\u5ff5\u6614\u5e74\u7684\u4e00\u4e2a\u591c\u665a&lt;\/span&gt;&lt;\/h2&gt;&lt;h2&gt;&lt;span style=&quot;color: inherit; font-size: 1em;&quot;&gt;\u661f\u5149\u5760\u5165\u4f60\u773c\u91cc\uff0c\u4f60\u843d\u8fdb\u6211\u5fc3\u91cc&lt;\/span&gt;&lt;\/h2&gt;&lt;h2&gt;\u6211\u559c\u6b22\u4f60\u2764\ufe0f&lt;\/h2&gt;",
+            "bg_style":"bg_custom",
+            "bg_img":"http://file.top112.top/h5-fans/yesno/123.jpg",
+            "pure_words_content":"\u611f\u60c5\u6de1\u4e86\u6211\u4eec\u518d\u57f9\u517b\uff0c\u65e0\u8bdd\u53ef\u8bf4\u4e86\u6211\u4eec\u5c31\u518d\u53bb\u627e\u8bdd\u9898\uff0c\u817b\u4e86\u6211\u4eec\u5c31\u91cd\u65b0\u5f00\u59cb\uff0c\u8981\u662f\u7d2f\u4e86\u5c31\u7ed9\u5f7c\u6b64\u7a7a\u95f4\uff0c\u4eba\u6f6e\u62e5\u6324\u9047\u89c1\u4f60\u4e0d\u5bb9\u6613\uff0c\u6211\u7231\u4f60\ud83d\udc95",
+            "typed_bool":"typed_y",
+            "simple_page_content":"&lt;h2&gt;&lt;\/h2&gt;&lt;h2&gt;用青春说一场故事&lt;\/h2&gt;&lt;h2&gt;用余生爱一个人&lt;\/h2&gt;&lt;h2&gt;想和你走一段很长很长的路&lt;\/h2&gt;&lt;h2&gt;这条路叫余生????&lt;\/h2&gt;",
+            "cursor_char":"cursor_heart",
+            "bg_style_pure_words":"bg_opacity","video_page_content":""};
+
+        console.log(theme_content);
+
+        var music_json={"music_select":"m_online","m_online_id":"2","m_online_url":"http://file.top112.top/uploads/wf/20220315/6892742870332771085.mp3","m_upload_name":"null","m_upload_url":"null"};
+        console.log(music_json);
+        var record_json={"record_bool":null,"r_wechat_time":"null","r_wechat_url":"null","r_wechat_amr":"null"};
+        console.log(record_json);
+        var signPackage={"appid":"wx47f716bdd7699533","timestamp":1580648510,"nonceStr":"huLJdVCkFBGKC2kZ","url":"http:\/\/www.makusi.cn\/Home\/Play\/play_show\/ws\/YGdmnWxj","signature":"22892ca8091fac2753990cc108e20bef52eb1706","rawString":"jsapi_ticket=sM4AOVdWfPE4DxkXGEs8VHINcjHJVwMsFjJyfreRy7BWBL6v6cFFh_VXICTjHY67yVgg2Z-ezii2J4nZgJEehw&noncestr=huLJdVCkFBGKC2kZ&timestamp=1580648510&url=http:\/\/www.makusi.cn\/Home\/Play\/play_show\/ws\/YGdmnWxj"};
+
+        var main_title='❥(^_-)';
+        // console.log(main_title);
+        if(main_title=='' || main_title=='null'){  //允许标题为空
+            document.title='很高兴遇见你';
+        }
+        // console.log("");
+        
+
+        var s_page_content=theme_content['simple_page_content']; 
+        var interval_s_height;
+        var height_s_page=$(".div_s_page_height").height(); 
+        function init_simple_page(){
+            load_saved_content(); //加载内容
+            // 初始化设置div的bg图片 初始化设置div的bg图片
+            if(typeof(theme_content['bg_style'])!='undefined' && theme_content['bg_style']=='bg_custom'){
+                if(typeof(theme_content['bg_img'])!='undefined' && theme_content['bg_img']!=''){                    
+                    $(".div_s_page_bg").css({"background-image": "url("+theme_content['bg_img']+")"});
+                }
+            }  
+
+            interval_s_height=setInterval(function(){
+                console.log('div_s_page_height -> '+$(".div_s_page_height").height());
+                var latest_height_s_page=$(".div_s_page_height").height();
+                if(latest_height_s_page<=height_s_page){
+                    clearInterval(interval_s_height);
+                    $(".div_s_page_height").height(latest_height_s_page+200);
+                    if($(".div_s_page_height").height()<$(window).height()){
+                        $(".div_s_page_height").height($(window).height()); //不能小于窗口的高度
+                        console.log('let us be high as window');
+                    }
+                }else{
+                    height_s_page=latest_height_s_page; 
+                }
+            },100);
+
+            $(".div_simple_page").fadeIn();
+            init_attachment();
+        } 
+        
+        function load_saved_content(){
+            if(typeof(s_page_content)=='undefined'){ //全新作品未保存
+                console.log('s_page_content -> undefined');
+                load_random_content();
+                return;
+            }
+            // temp_content=escape2Html(s_page_content); 
+            // temp_content=temp_content.replace(/<[^<>]+>/g,''); 
+            // temp_content=temp_content.replace(/\n|\r|\s/g,'');
+            // // console.log(temp_content);
+            // if(temp_content==''){ //曾有保存但没有内容，则显示为空白
+            //     load_random_content()
+            //     return;
+            // }
+            console.log('load_saved_content');
+            var html_content=escape2Html(s_page_content);
+            $(".div_s_page_zx").html(html_content); //初始化加载内容 
+            $(".div_s_page_height").html(html_content); //初始化复制内容，撑开文档高度 
+        }
+
+        function load_random_content(){
+            console.log('load_random_content');
+            var random_content="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;h2 style=&quot;color: rgb(255, 88, 61); font-weight: 800;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;送给你的小惊喜&lt;/h2&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;"+random_text()+"&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;child-node-is-img&quot; contenteditable=&quot;false&quot;&gt;&lt;img src=&quot;"+random_img()+"&quot; width=&quot;100%&quot; height=&quot;auto&quot; id=&quot;zxeditor_img_1570285474432&quot;&gt;&lt;i class=&quot;__remove&quot;&gt;&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;"+random_text()+"&lt;/p&gt;&lt;p class=&quot;child-node-is-text&quot;&gt;"+random_text()+"&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;child-node-is-img&quot; contenteditable=&quot;false&quot;&gt;&lt;img src=&quot;"+random_img()+"&quot; width=&quot;100%&quot; height=&quot;auto&quot; id=&quot;zxeditor_img_1570409946707&quot;&gt;&lt;i class=&quot;__remove&quot;&gt;&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;child-node-is-text&quot;&gt;"+random_text()+"&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;child-node-is-text&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; "+"——爱你的小鹿"+"&lt;/p&gt;";
+            var html_content=escape2Html(random_content);
+            $(".div_s_page_zx").html(html_content); //初始化加载内容 
+            $(".div_s_page_height").html(html_content); //初始化复制内容，撑开文档高度
+        }
+
+
+        //转义为html
+        function escape2Html(str) {
+            var arrEntities={'lt':'<','gt':'>','nbsp':' ','amp':'&','quot':'"'};
+            return str.replace(/&(lt|gt|nbsp|amp|quot);/ig,function(all,t){return arrEntities[t];});
+        } 
+
+        var temp_text_array=array_as_words_love;
+        function random_text(){
+            var random_text_index=Math.floor(Math.random()*temp_text_array.length);
+            var random_text=temp_text_array[random_text_index];
+            temp_text_array.splice(random_text_index,1);
+            return random_text;
+        }
+        var temp_img_array=array_as_pics_s;
+        function random_img(){
+            var random_img_index=Math.floor(Math.random()*temp_img_array.length);
+            var random_img=temp_img_array[random_img_index];
+            temp_img_array.splice(random_img_index,1);
+            return random_img;
+        }
+    </script>
+
+     <!-- 按需加载，选择此片头时方才加载 -->
+    <script> 
+        var start_content = {
+            "intersect_text":"以后呀，你生气了要告诉我，吃醋了也要告诉我，不许什么事都往心里憋，你的心那么小，住一个胖胖的我，就已经很满的啦，怎么能再让其他不开心的的是憋在里边呢，挤坏了我你可是会心疼的",
+            "cursor_char":"cursor_heart",
+            "bg_style":"bg_custom",
+            "bg_img":"http://file.top112.top/h5-fans/yesno/123.jpg",
+            "img_bool":"img_true",
+            "img_src":"http://web-yd.oss-cn-hangzhou.aliyuncs.com/uploads/wf/20220615/62ac8cfa63b99c7acb3c06dd8383c769.gif",
+            "chase_title":"我好想你",
+                        "chase_text":"你知道此刻的我有多想你吗？🌈❤️💌🌷💖🌹🍬✨",
+            "chase_benefit":[
+            	'想你 朝朝暮暮','想你 云起雾散','想你 花前月下','想你 眼底心头','想你 今生来世','真的好想好想你',            ],
+            "skip":2        };
+
+        $(function(){
+            //此事件为触发互动创意
+            var start_id='onlyyou'; //可能为null
+            init_start(start_id);
+        });
+        
+        function init_start(start_id){ 
+            console.log('init_start ->'+start_id);
+            switch(start_id){
+                case 'loveformat':
+                    $('.div_loveformat').show();
+                    init_loveformat();
+                    break;
+                case 'hearttree':
+                    $('#div_hearttree').show();
+                    init_hearttree();
+                    break;
+                case 'courage':
+                    $('#div_courage').show();
+                    init_courage();
+                    break;
+                case 'birthdaycake':
+                    $('#div_dbcake').show();
+                    init_birthdaycake();
+                    break;
+                case 'intersect':
+                    $('#div_intersect').show();
+                    init_intersect();
+                    break;
+                case 'onlyyou':
+                    $('#div_onlyyou').show();
+                    init_onlyyou();
+                    break;
+                default:
+                    init_theme(); 
+            }
+        } 
+
+        //开始动画主体部分
+        function init_theme(){
+            console.log('init_theme');
+            $('#div_start_bg').fadeOut();
+            init_simple_page();
+        }
+
+    </script>
+
+
+
+
+    
+
+        
+
+    
+
+    
+
+     
+
+
+    <!-- 按需加载，选择此片头时方才加载 -->
+        <script src="https://oss.zhaodaa.cn/h5-fans/yesno/start_onlyyou.js"></script>
+
+
+
+
+    <script> 
+        var attachment='null'; //可能为null
+        var attached_content={"bool_save":false}; //可能为null
+        console.log(attached_content); 
+       
+        function init_attachment(){  //开始attachment
+            console.log('init_attachment ->'+attachment);
+            switch(attachment){
+                case 'timer':
+                    init_at_timer();
+                    break;
+                default:
+                    return; 
+            }
+        } 
+    </script>
+
+            
+    <script src="https://oss.zhaodaa.cn/h5-fans/yesno/jweixin-1.2.0.js"></script>
+	<script src="https://oss.zhaodaa.cn/h5-fans/yesno/theme_common.js"></script> <!-- 音乐控制和微信设置等公共部分js外部引入 -->
+
+
+
+
+
+
+</body></html>
