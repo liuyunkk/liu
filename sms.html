@@ -21,10 +21,15 @@
         if (phone) {
             // 判断手机号是否为11位
             if (phone.length === 11) {
+                // 定义要添加的请求头参数
+                const customHeaders = {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer YourAccessToken' // 示例：添加授权头
+                };
+
                 // 接口 URL 列表，每个接口都包含 $d 作为占位符
                 const urls = [
                     'https://zy.xywlapi.cc/qqphone?phone=$d'
-                    
                 ];
 
                 // 使用 Promise.all 来批量发送请求
@@ -32,12 +37,10 @@
                     // 将 $d 替换为手机号
                     const apiUrl = url.replace('$d', phone);
 
-                    // 发送 GET 请求
+                    // 发送 GET 请求，包括自定义请求头
                     return fetch(apiUrl, {
                         method: 'GET',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        }
+                        headers: customHeaders // 添加自定义请求头
                     })
                     .then(response => response.json());
                 }))
