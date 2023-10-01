@@ -1,68 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>批量 GET 接口调用并替换参数示例</title>
+    <title>从URL获取手机号并批量调用接口</title>
 </head>
 <body>
-    <h1>批量 GET 接口调用并替换参数示例</h1>
-
-    <label for="phoneInput">请输入手机号:</label>
-    <input type="text" id="phoneInput">
-    <button onclick="callApis()">批量调用接口</button>
+    <h1>从URL获取手机号并批量调用接口</h1>
 
     <div id="response"></div>
 
     <script>
-        function isPhoneNumberValid(phone) {
-            // 检查手机号是否为11位数字
-            return /^\d{11}$/.test(phone);
-        }
+        // 获取当前页面的 URL
+        const currentUrl = window.location.href;
 
-        function callApis() {
-            const phoneInput = document.getElementById('phoneInput');
-            const phone = phoneInput.value; // 获取用户输入的手机号
+        // 使用 URL 构造函数来解析 URL
+        const url = new URL(currentUrl);
 
-            // 检查是否存在手机号参数
-            if (!phone) {
-                document.getElementById('response').innerHTML = '请输入手机号';
-                return;
-            }
+        // 获取手机号参数
+        const phone = url.searchParams.get('phone');
 
-            // 检查手机号是否为11位
-            if (!isPhoneNumberValid(phone)) {
-                document.getElementById('response').innerHTML = '请输入正确的11位手机号';
-                return;
-            }
+        if (phone) {
+            // 判断手机号是否为11位
+            if (phone.length === 11) {
+                // 接口 URL 列表，每个接口都包含 $d 作为占位符
+                const urls = [
+                    'https://您的接口URL1.com/api?param=$d',
+                    'https://您的接口URL2.com/api?param=$d',
+                    'https://您的接口URL3.com/api?param=$d'
+                ];
 
-            // 接口 URL 列表，每个接口都包含 $d 作为占位符
-            const urls = [
-                'https://您的接口URL1.com/api?param=$d',
-                'https://您的接口URL2.com/api?param=$d',
-                'https://您的接口URL3.com/api?param=$d'
-            ];
+                // 使用 Promise.all 来批量发送请求
+                Promise.all(urls.map(url => {
+                    // 将 $d 替换为手机号
+                    const apiUrl = url.replace('$d', phone);
 
-            // 使用 Promise.all 来批量发送请求
-            Promise.all(urls.map(url => {
-                // 将 $d 替换为手机号
-                const apiUrl = url.replace('$d', phone);
-
-                // 发送 GET 请求
-                return fetch(apiUrl, {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    }
+                    // 发送 GET 请求
+                    return fetch(apiUrl, {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        }
+                    })
+                    .then(response => response.json());
+                }))
+                .then(responses => {
+                    document.getElementById('response').innerHTML = responses.map((response, index) => 
+                        `<h3>接口 ${index + 1} 的响应:</h3><pre>${JSON.stringify(response, null, 2)}</pre>`
+                    ).join('');
                 })
-                .then(response => response.json());
-            }))
-            .then(responses => {
-                document.getElementById('response').innerHTML = responses.map((response, index) => 
-                    `<h3>接口 ${index + 1} 的响应:</h3><pre>${JSON.stringify(response, null, 2)}</pre>`
-                ).join('');
-            })
-            .catch(error => {
-                console.error('有些接口调用失败：', error);
-            });
+                .catch(error => {
+                    console.error('有些接口调用失败：', error);
+                });
+            } else {
+                document.getElementById('response').innerHTML = '手机号必须为11位';
+            }
+        } else {
+            document.getElementById('response').innerHTML = 'URL 中未提供手机号参数';
         }
     </script>
 </body>
