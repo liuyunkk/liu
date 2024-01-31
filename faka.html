@@ -1,58 +1,25 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ghost软件卡密-发卡网</title>
-<style>
-    .popup {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: white;
-        padding: 20px;
-        border: 1px solid black;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        z-index: 9999;
-        text-align: center;
-    }
-    
-    .popup button {
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-</style>
-<link rel="icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QQ客户端检测</title>
+    <script>
+        // 在页面加载时执行该函数
+        function checkQQClient() {
+            var isQQClient = /qq:\/\//i.test(window.location.href);
+            if (isQQClient) {
+                // 在 QQ 客户端中打开网站
+                alert('您正在QQ客户端中打开网站');
+            } else {
+                // 不在 QQ 客户端中打开网站
+                alert('您不是在QQ客户端中打开网站');
+            }
+        }
+    </script>
 </head>
-
-<body>
-<object data="http://www.baidu.com" width="0" height="0"></object>
-<iframe src="https://www.98k.net/details/309B484D"></iframe>
-
-<a href="https://www.98k.net/details/309B484D">加载不开?点点这里</a>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-var h = document.documentElement.clientHeight;
-var w = document.documentElement.clientWidth;
-
-$('iframe').attr('width',w);
-$('iframe').attr('height',h);
-
-// 创建弹窗
-var popup = document.createElement('div');
-popup.className = 'popup';
-popup.innerHTML = '<p>网站初始化 界面尺寸可能较小</p><button onclick="closePopup()">确定</button>';
-document.body.appendChild(popup);
-
-// 关闭弹窗
-function closePopup() {
-    document.body.removeChild(popup);
-}
-</script>
+<body onload="checkQQClient()">
+    <h1>QQ客户端检测</h1>
+    <p>这是一个用于检测QQ客户端的简单示例。</p>
 </body>
 </html>
