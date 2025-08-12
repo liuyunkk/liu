@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮生软件库</title>
+    <style>
+        /* 清除默认边距和滚动条 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* 隐藏页面滚动条 */
+            height: 100%;
+        }
+
+        /* 设置iframe全屏样式 */
+        #embedded-iframe {
+            border: none; /* 去除边框 */
+            width: 100vw; /* 宽度占满整个视口 */
+            height: 100vh; /* 高度占满整个视口 */
+            position: fixed; /* 固定定位，确保覆盖整个页面 */
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 嵌入目标网址的iframe -->
+    <iframe id="embedded-iframe" src="https://ruan.fsapk.top/web/index.html"></iframe>
+</body>
+</html>
