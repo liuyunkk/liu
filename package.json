@@ -1,5 +1,5 @@
 {
-  "name": "edgeone-kv-json",
-  "version": "1.0.0",
-  "description": "Output JSON from EdgeOne KV"
+  "title": "edgeone-kv-json",
+  "content": "1.0.0",
+  "imgurl": "Output JSON from EdgeOne KV"
 }
