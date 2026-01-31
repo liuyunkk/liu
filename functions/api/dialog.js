@@ -1,31 +1,28 @@
-export async function onRequest({ request, env }) {
-  // 1. 这里的 DB 必须在 EdgeOne 控制台完成绑定
-  const KV_NAMESPACE = env.DB; 
-  const KEY_NAME = "dialog_for_android";
+export async function onRequest(context) {
+  // 调试：看看 env 到底在不在 context 里
+  const { env, request } = context;
+  
+  if (!env) {
+    return new Response(JSON.stringify({ 
+      error: "Context 结构异常", 
+      context_keys: Object.keys(context) 
+    }), { status: 500 });
+  }
+
+  if (!env.DB) {
+    return new Response(JSON.stringify({ 
+      error: "env.DB 依然不存在", 
+      available_env_keys: Object.keys(env), // 这里会列出所有成功绑定的变量名
+      tip: "如果这里没有 DB，说明绑定配置未生效"
+    }), { status: 500 });
+  }
 
   try {
-    // 2. 直接从 KV 读取并解析 JSON
-    const data = await KV_NAMESPACE.get(KEY_NAME, { type: 'json' });
-
-    if (!data) {
-      return new Response(JSON.stringify({ error: "Data not found" }), {
-        status: 404,
-        headers: { "Content-Type": "application/json" }
-      });
-    }
-
-    // 3. 直接输出 JSON
+    const data = await env.DB.get("dialog_for_android", { type: "json" });
     return new Response(JSON.stringify(data), {
-      status: 200,
-      headers: {
-        "Content-Type": "application/json; charset=utf-8",
-        "Access-Control-Allow-Origin": "*" // 允许 Android 客户端跨域调用
-      }
+      headers: { "Content-Type": "application/json; charset=utf-8" }
     });
-  } catch (err) {
-    return new Response(JSON.stringify({ error: "Server Error", msg: err.message }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" }
-    });
+  } catch (e) {
+    return new Response(JSON.stringify({ error: e.message }), { status: 500 });
   }
 }
